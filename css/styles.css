@@ -83,6 +83,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;  
 }
+
+.menu_item_link:hover {
+  text-decoration: underline;
+}
   
 .header-title {
   box-sizing: border-box;
@@ -158,6 +162,10 @@ body {
   color: #b59f5b;
 }
 
+.post_tag_link:hover {
+  text-decoration: underline;
+}
+
 .article_title {
   margin-top: 14px;
   margin-bottom: 30px;
@@ -169,6 +177,10 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #0f0d0e;
+}
+
+.article_title_link:hover {
+  color: #b59f5b;
 }
 
 .article_date {
@@ -207,13 +219,10 @@ body {
 
 .quick_navigation_title::after {
   content: "";
-  background-color: #e1d9bd;
-  height: 3px;
+  display: block; 
   width: 66px;
-  top: 13px;
-  right: 99px;
-  bottom: 0px;
-  left: 80px;
+  margin: 9px auto 0;
+  border-bottom: 3px solid #e1d9bd;
 }
 
 .post_item {
@@ -356,9 +365,9 @@ body {
 .tags_list_item {
   display: flex;
   align-items: center;
-  border: 1px solid #eeeeee;
+  border: 3px solid #eeeeee;
   height: 23px;
-  padding: 6px 10px;
+  padding: 3px 13px;
   margin-top: 4px;
   margin-right: 4px;
 }
@@ -398,8 +407,12 @@ body {
   font-weight: bold;
 }
 
+.topic_link:hover {
+  color: #b59f5b;
+  cursor: pointer;
+}
+
 .topic_link_quantity {
-  display: inline-block;
   font-weight: bold;
   font-size: 12px;
   color: #b59f5b;
