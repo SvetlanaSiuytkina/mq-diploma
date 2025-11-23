@@ -18,6 +18,194 @@ body {
   padding: 0;
 }
 
+
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-toggle:checked + .popup {
+  display: flex;
+}
+
+.popup-content {
+  background-color: #ffffff;
+  width: 380px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+  padding: 50px 25px;
+}
+
+.feedback {
+  font-size: 20px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  font-weight: 700;
+  text-align: center;
+}
+
+.feedback::after {
+  content: "";
+  display: block; 
+  width: 66px;
+  margin: 9px auto 0;
+  border-bottom: 3px solid #e1d9bd;  
+}
+
+.form-row {
+  display: flex;
+}
+
+/*.form-row:nth-child(n+1) {
+	margin-top: 30px;
+}*/
+
+.form-group {
+	display: block;
+  width: 100%;
+}
+
+.form-hint {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+	display: block;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.select {
+  display: block;
+  box-sizing: border-box;
+  width: 325px;
+  height: 42px;
+  margin: 0;
+  padding-left: 15px;
+  background-color: #f4f7f6;
+  font-weight: 400;
+  border: none;
+  font-size: 13px;
+  color: #000000;
+  opacity: 0.541;
+}
+
+.select:focus {
+  outline: 1px solid #b59f5b;
+}
+ 
+.select-icon {  
+  background-image: url("svg\form-arrows.svg");
+	background-repeat: no-repeat;
+	background-position: right 5px center;
+  background-size: 18px;
+  border: none;
+  width: 20px;
+  height: 42px;
+
+  -webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.radio-group-text {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.radio-group-text::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("svg\form-empty-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px;
+  vertical-align: middle;
+}
+
+.field-text {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: 15px;
+  background-color: #f4f7f6;
+  border: none;
+  max-width: 325px;
+  min-width: 325px;
+  min-height: 125px;
+  max-height: 250px;
+  font-size: 13px;
+}
+
+.field-text:focus {
+  border: 1px solid #b59f5b;
+}
+
+.field-text::placeholder {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+  opacity: 0.541;
+}
+
+/*.field-text::-webkit-input-placeholder {
+  font-family: "Open Sans";
+ }
+.field-text::-moz-placeholder {
+  font-family: "Open Sans";
+  }
+.field-text:-moz-placeholder {
+  font-family: "Open Sans";
+}
+.field-text::-ms-input-placeholder {
+  font-family: "Open Sans";
+}*/
+
+.button-form-row {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #b59f5b;
+  font-weight: 700;
+  margin-top: 21px;
+  width: 100%;
+  height: 50px;
+  border: none;
+}
+
+.button-form-row:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+.popup-close-svg {
+  width: 20px;
+}
+
+.popup-close {
+  position: absolute;
+  color: #ffffff;
+  right: 1px;
+  top: -43px;
+  font-size: 40px;
+}
+
+.popup-close:hover {
+  cursor: pointer;
+}
+
 .header {
   background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
   background-repeat: no-repeat;
@@ -131,7 +319,6 @@ body {
 
 .box-trends {
   display: flex;
-  flex-wrap: wrap;
   gap: 4px;
   width: 100%
 }
@@ -152,22 +339,28 @@ body {
   position: absolute;
 }
 
-.picture-trends {
+.picture-trends1 {
+  background-image: url("images\trend1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*.picture-trends {
   display: flex;
   object-fit: cover;
   object-position: center;
   z-index: -1;
   background-color: #000000;
   opacity: 0.6;
-}
+}*/
 
 .trends-category {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   border: 3px solid #b59f5b;
   width: 370px;
   padding: 32px;
   margin: 0 20px 20px 20px;
-  position: absolute;
 }
 
 .trends-list {
@@ -194,37 +387,27 @@ body {
   color: #b59f5b;
 }
 
-.popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.title-trend-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.popup-toggle:checked + .popup {
-  display: flex;
+.picture-trends2 {
+  background-image: url("images\trend2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.popup-content {
-  background-color: #ffffff;
-  width: 380px;
-  height: 575px;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  position: relative;
+.picture-trends3 {
+  background-image: url("images\trend3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.popup-close {
-  position: absolute;
-  color: #ffffff;
-  right: -50px;
-  top: -50px;
-  font-size: 40px;
+.picture-trends4 {
+  background-image: url("images\trend4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .page {
@@ -577,10 +760,8 @@ body {
 
 .shop-box {
   display: flex;
-  flex-wrap: wrap;
   gap: 62px;
   margin-bottom: 60px;
-  width: 100%;
 }
 
 .shop-item {
@@ -590,15 +771,18 @@ body {
 }
 
 .shop-groupe {
+  display: flex;
   position: relative;
   z-index: -1;
+  justify-content: center;
 }
 
 .shop-content {
-  position: absolute;
+  box-sizing: border-box;
+  position: relative;
   flex-grow: 1;
   margin-top: -34px;
-  z-index: 1;
+  z-index: 0;
   padding: 52px 20px 26px 20px;
   border: 3px solid #b59f5b;
 }
@@ -623,6 +807,10 @@ body {
   color: #b59f5b;
   text-decoration: none;
   justify-content: space-between;
+}
+
+.shop-link:hover {
+  text-decoration: underline;
 }
 
 .shop-info {
@@ -653,7 +841,27 @@ body {
   font-weight: 700;
 }
 
-.shop-button {
+.shop-price-link {
+  display: flex;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #b59f5b;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  width: 138px;
+  height: 45px;
+  border: none; 
+}
+
+.shop-price-link:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+/*.shop-button {
   box-sizing: border-box;
   height: 48px;
   width: 140px;
@@ -669,7 +877,7 @@ body {
 .shop-button:hover {
   background-color: #323232;
   cursor: pointer;
-}
+}*/
 
 .end {
   display: block;
