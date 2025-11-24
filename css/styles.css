@@ -18,8 +18,95 @@ body {
   padding: 0;
 }
 
+@media (max-width: 641px) {
+  .header {
+    background-image: url("images\banner-mobile.jpg");
+    padding-top: 30px;
+    padding-bottom: 210px;
+  }
 
+  .coteiner_header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
+  .logo {
+    width: 260px;
+  }
+
+  .header-title {
+    font-size: 26px;
+    width: 328px;
+    height: 384px;
+    line-height: 36px;
+  }
+
+  .trends {
+    font-size: 16px;
+  }
+
+  .box-trends {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .post-trends {
+    padding: 28px 15px;
+  }
+
+  .title-trend-link {
+    font-size: 16px;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts {
+    width: 100%;
+  }
+
+  .picture {
+    width: 100%;
+  }
+
+  .article_title {
+    font-size: 16px;
+  }
+
+  .article_text {
+    font-size: 14px;
+  }
+  
+  .quick_navigation {
+    width: 100%;
+  }
+
+  .quick_navigation_title {
+    font-size: 16px;
+  }
+
+  .shop-title {
+    font-size: 16px;
+  }
+
+  .shop-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .shop-item {
+    width: 100%;
+  }
+
+  .shop-title-item {
+    font-size: 17px;
+  }
+}
+/*---------------------------------------------------------*/
 .popup {
   position: fixed;
   width: 100%;
@@ -104,8 +191,8 @@ body {
   outline: 1px solid #b59f5b;
 }
  
-.select-icon {  
-  background-image: url("svg\form-arrows.svg");
+.select-icon {
+  .background-image: url("svg\form-arrows.svg");
 	background-repeat: no-repeat;
 	background-position: right 5px center;
   background-size: 18px;
@@ -205,7 +292,7 @@ body {
 .popup-close:hover {
   cursor: pointer;
 }
-
+/*---------------------------------------------------------------------*/
 .header {
   background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
   background-repeat: no-repeat;
@@ -290,13 +377,12 @@ body {
   width: 670px;
   margin: 90px auto;
 }
-
+/*---------------------------------------------------------------------*/
 .trends {
   display: block;
   margin-bottom: 60px;
   margin: 0;
   padding: 0;
-  
 }
 
 .title-trends {
@@ -409,7 +495,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
+/*---------------------------------------------------------------------*/
 .page {
   display: flex;
   width: 1200px;
@@ -509,7 +595,7 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-
+/*---------------------------------------------------------------------*/
 .quick_navigation {
   display: block;
   width: 270px; 
@@ -623,7 +709,7 @@ body {
 .search_button:hover {
   background-color: #323232;
 }
-
+/*---------------------------------------------------------------------*/
 .mailing {
   margin-top: 60px;  
 }
@@ -659,14 +745,14 @@ body {
   background-color: #323232;
   cursor: pointer;
 }
-
-.tags_title {
+/*---------------------------------------------------------------------*/
+/*.tags_title {
   font-size: 14px;
   color: #0f0d0e;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-}
+}*/
 
 .tags_list {
   display: flex;
@@ -698,7 +784,7 @@ body {
   outline: 1px solid #b59f5b;
   cursor: pointer;
 }
-
+/*---------------------------------------------------------------------*/
 .topic_list {
   display: block;
   margin: 0;
@@ -733,7 +819,7 @@ body {
   vertical-align: top;
   margin-left: 5px;
 }
-
+/*---------------------------------------------------------------------*/
 .shop-container {
   max-width: 1170px;
   margin: 0 auto;
@@ -878,7 +964,7 @@ body {
   background-color: #323232;
   cursor: pointer;
 }*/
-
+/*---------------------------------------------------------------------*/
 .end {
   display: block;
   margin-top: 60px;
